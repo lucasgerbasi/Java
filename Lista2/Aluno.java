@@ -1,3 +1,5 @@
+package Lista2;
+
 public class Aluno {
     public int nroAluno, idade;
     public String nome;
@@ -21,8 +23,8 @@ public class Aluno {
     }
 
     public void setNroAluno(int nroAluno) {
-        if (nroAluno == 6) {
-            return nroAluno;
+        if (String.valueOf(nroAluno).length() == 6) {
+            this.nroAluno = nroAluno;
         } else {
             System.out.println("Número inválido.");
         }
@@ -52,7 +54,7 @@ public class Aluno {
         }
     }
 
-    public float getP1() {
+    public void getP1() {
         this.p1 = p1;
     }
 
@@ -64,8 +66,8 @@ public class Aluno {
         }
     }
 
-    public float getP2() {
-        return p2;
+    public void getP2() {
+        this.p2 = p2;
     }
 
     public void setP2(float p2) {
@@ -82,7 +84,6 @@ public class Aluno {
         return notaFinal;
     }
 
-    @Override
     public String dadosAlunos() {
             return "Aluno{" +
                     "nroAluno=" + nroAluno +
